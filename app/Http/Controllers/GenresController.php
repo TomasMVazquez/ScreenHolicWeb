@@ -24,10 +24,8 @@ class GenresController extends Controller
 
   public function index()
   {
-    $data = Curl::to("https://api.themoviedb.org/3/genre/movie/list?api_key=8cf5839284635d0e7a91a80666d3c22d&language=es-ES")->get();
-    $jsonData = json_decode($data,true);
-    $genres = $jsonData["genres"];
-    // $genres->getGenreMovie();
-    return view('genres-index', compact('genres'));
+    $genresMovies = $this->getGenreMovie();
+    $genresSeries = $this->getGenreSerie();
+    return view('genres-index', compact('genresMovies','genresSeries'));
   }
 }

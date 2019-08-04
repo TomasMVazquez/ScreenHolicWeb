@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -29,7 +29,7 @@ class HomeController extends Controller
       $totalPages = $jsonData["total_pages"];
       $totalResults = $jsonData["total_results"];
       $trends = $jsonData["results"];
-        return view('home',compact('trends','totalPages'));
+      return view('home',compact('trends','totalPages'));
     }
 
 
