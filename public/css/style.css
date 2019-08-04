@@ -1,0 +1,19 @@
+.cardy {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btnCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.cardShow {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
