@@ -18,7 +18,7 @@
           <div class="card-body cardShow">
             <h5 class="card-title">{{ $trend['name']}}</h5>
             <h6 class="card-text">{{ $trend['first_air_date']}}</h6>
-            <p class="card-text">{{ $trend['overview']}}</p>
+            <p class="card-text">{{ str_limit($trend['overview'],100) }}</p>
             <a href="/movies/{{ $trend['id']}}" class="btn btn-primary btnCard">Ver</a>
           </div>
         </div>
@@ -28,7 +28,7 @@
           <div class="card-body cardShow">
             <h5 class="card-title">{{ $trend['title'] ? $trend['title'] : $trend['name']}}</h5>
             <h6 class="card-text">{{ $trend['release_date']}}</h6>
-            <p class="card-text">{{ $trend['overview']}}</p>
+            <p class="card-text">{{ str_limit($trend['overview'],100) }}</p>
             <a href="/movies/{{ $trend['id']}}" class="btn btn-primary btnCard">Ver</a>
           </div>
         </div>

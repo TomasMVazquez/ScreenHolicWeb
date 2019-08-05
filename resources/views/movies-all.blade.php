@@ -14,7 +14,7 @@
       <div class="card-body cardShow">
         <h5 class="card-title">{{ $movie['title']}}</h5>
         <h6 class="card-text">{{ $movie['release_date']}}</h6>
-        <p class="card-text">{{ $movie['overview']}}</p>
+        <p class="card-text">{{ str_limit($movie['overview'],100)}}</p>
         <a href="/movies/{{ $movie['id']}}" class="btn btn-primary btnCard">Ver</a>
       </div>
     </div>
@@ -28,9 +28,9 @@
         <li class="page-item disabled">
             <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
         </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        @for ($i=1; $i < 6 ; $i++)
+          <li class="page-item"><a class="page-link" href="/movies/page/{{ $i }}">{{ $i }}</a></li>
+        @endfor
         <li class="page-item">
             <a class="page-link" href="#">Next</a>
         </li>

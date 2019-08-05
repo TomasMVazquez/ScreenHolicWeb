@@ -22,5 +22,11 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/movies', 'MoviesController@index');
+Route::get('/movies/page/{id}', 'MoviesController@pages');
+Route::get('/movies/{id}', 'MoviesController@detail');
+
 Route::get('/series', 'SeriesController@index');
+Route::get('/series/page/{id}', 'SeriesController@pages');
+Route::get('/series/{id}', 'SeriesController@detail');
+
 Route::get('/genres', 'GenresController@index');

@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Domine&display=swap');
+
+h1{
+  font-family: 'Domine', serif;
+  text-align: right;
+  margin-right: 25px;
+  margin-top: 10px
+}
 .cardy {
     display: flex;
     flex-wrap: wrap;
@@ -16,4 +24,15 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    justify-content: space-between;
+}
+.notFound{
+  background-image: url("/imgs/tv_lluvia.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  height: 350px;
+  width: 350px;
+  color: white;
 }
